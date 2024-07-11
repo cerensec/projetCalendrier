@@ -18,4 +18,5 @@ public class DayDto implements Serializable {
     Long id;
     LocalDate date;
     GifDto gif;
+    int cost;
 }

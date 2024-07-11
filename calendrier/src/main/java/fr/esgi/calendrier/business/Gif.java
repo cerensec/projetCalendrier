@@ -31,9 +31,6 @@ public class Gif {
     @Column(nullable = false)
     private LocalDate uploadDate;
 
-    @Column(nullable = false)
-    private Integer cost;
-
     @NotNull
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)

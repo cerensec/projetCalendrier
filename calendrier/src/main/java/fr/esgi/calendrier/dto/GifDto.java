@@ -20,7 +20,6 @@ public class GifDto implements Serializable {
     String url;
     String legend;
     LocalDate uploadDate;
-    Integer cost;
     @NotNull
     UserDto uploadUser;
 }

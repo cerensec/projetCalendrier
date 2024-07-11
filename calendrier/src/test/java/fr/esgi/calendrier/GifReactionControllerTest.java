@@ -86,7 +86,6 @@ class GifReactionControllerTest {
                 .url("url")
                 .legend("legend")
                 .uploadDate(LocalDate.now())
-                .cost(30)
                 .uploadUser(userDto)
                 .build();
         final ReactionDto reactionDto = ReactionDto.builder()
