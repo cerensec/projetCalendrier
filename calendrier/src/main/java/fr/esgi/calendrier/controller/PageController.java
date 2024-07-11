@@ -7,22 +7,40 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PageController {
 
-    @GetMapping("/page1")
-    public String getPage1(Model model) {
+    @GetMapping("/connexion")
+    public String getConnexion(Model model) {
         model.addAttribute("message", "Bienvenue sur la page 1!");
-        return "page1";
+        return "connexion";
     }
 
-    @GetMapping("/page2")
-    public String getPage2(Model model) {
+    @GetMapping("/inscription")
+    public String getInscription(Model model) {
         model.addAttribute("message", "Bienvenue sur la page 2!");
-        return "page2";
+        return "inscription";
     }
 
-    @GetMapping("/page3")
-    public String getPage3(Model model) {
+    @GetMapping("/calendrier")
+    public String getCalendrier(Model model) {
         model.addAttribute("message", "Bienvenue sur la page 3!");
-        return "page3";
+        return "calendrier";
+    }
+
+    @GetMapping("/placer-gif")
+    public String getPlacerGif(Model model) {
+        model.addAttribute("message", "Bienvenue sur la page 3!");
+        return "placer-gif";
+    }
+
+    @GetMapping("/televerser-gif")
+    public String getTeleverserGif(Model model) {
+        model.addAttribute("message", "Bienvenue sur la page 3!");
+        return "televerser-gif";
+    }
+
+    @GetMapping("/reagir-gif")
+    public String getReagirGif(Model model) {
+        model.addAttribute("message", "Bienvenue sur la page 3!");
+        return "reagir-gif";
     }
 }
 
