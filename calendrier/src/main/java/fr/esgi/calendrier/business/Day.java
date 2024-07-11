@@ -26,4 +26,7 @@ public class Day {
     @ManyToOne
     @JoinColumn(name = "gif_id")
     private Gif gif;
+
+    @Column(nullable = false)
+    private int cost;
 }

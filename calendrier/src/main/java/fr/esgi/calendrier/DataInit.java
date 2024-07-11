@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Random;
 
 @Component
 public class DataInit implements CommandLineRunner {
@@ -59,11 +60,13 @@ public class DataInit implements CommandLineRunner {
         // Day init
         final LocalDate now = LocalDate.now();
         final int monthDays = now.lengthOfMonth();
+        final Random random = new Random();
 
         for (int i = 1; i <= monthDays; i++) {
             LocalDate date = LocalDate.of(now.getYear(), now.getMonth(), i);
             Day day = new Day();
             day.setDate(date);
+            day.setCost(random.nextInt((50-10) +1 ) + 10);
             dayRepository.save(day);
         }
     }

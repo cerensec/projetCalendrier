@@ -37,6 +37,7 @@ public class DayMapper {
                 .id(day.getId())
                 .date(day.getDate())
                 .gif(day.getGif() != null ? gifMapper.toDto(day.getGif()) : null)
+                .cost(day.getCost())
                 .build();
     }
 
@@ -51,6 +52,7 @@ public class DayMapper {
                 .id(dayDto.getId())
                 .date(dayDto.getDate())
                 .gif(gifMapper.toEntity(dayDto.getGif()))
+                .cost(dayDto.getCost())
                 .build();
     }
 

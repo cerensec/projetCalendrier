@@ -36,7 +36,6 @@ public class GifMapper {
                 .url(gif.getUrl())
                 .legend(gif.getLegend())
                 .uploadDate(gif.getUploadDate())
-                .cost(gif.getCost())
                 .uploadUser(userMapper.toDto(gif.getUploadUser()))
                 .build();
 
@@ -54,7 +53,6 @@ public class GifMapper {
                 .url(gifDto.getUrl())
                 .legend(gifDto.getLegend())
                 .uploadDate(gifDto.getUploadDate())
-                .cost(gifDto.getCost())
                 .uploadUser(userMapper.toEntity(gifDto.getUploadUser()))
                 .build();
     }

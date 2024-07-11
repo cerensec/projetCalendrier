@@ -42,7 +42,6 @@ class GifMapperTest {
                 .url("url")
                 .legend("legend")
                 .uploadDate(LocalDate.now())
-                .cost(30)
                 .uploadUser(user)
                 .build();
 
@@ -54,7 +53,6 @@ class GifMapperTest {
         Assertions.assertEquals(gif.getUrl(), result.getUrl());
         Assertions.assertEquals(gif.getLegend(), result.getLegend());
         Assertions.assertEquals(gif.getUploadDate(), result.getUploadDate());
-        Assertions.assertEquals(gif.getCost(), result.getCost());
         Assertions.assertEquals(gif.getUploadUser().getId(), result.getUploadUser().getId());
         Assertions.assertEquals(gif.getUploadUser().getFirstName(), result.getUploadUser().getFirstName());
         Assertions.assertEquals(gif.getUploadUser().getLastName(), result.getUploadUser().getLastName());
@@ -77,7 +75,6 @@ class GifMapperTest {
                 .url("url")
                 .legend("legend")
                 .uploadDate(LocalDate.now())
-                .cost(30)
                 .uploadUser(userDto)
                 .build();
 
@@ -89,7 +86,6 @@ class GifMapperTest {
         Assertions.assertEquals(gifDto.getUrl(), result.getUrl());
         Assertions.assertEquals(gifDto.getLegend(), result.getLegend());
         Assertions.assertEquals(gifDto.getUploadDate(), result.getUploadDate());
-        Assertions.assertEquals(gifDto.getCost(), result.getCost());
         Assertions.assertEquals(gifDto.getUploadUser().getId(), result.getUploadUser().getId());
         Assertions.assertEquals(gifDto.getUploadUser().getFirstName(), result.getUploadUser().getFirstName());
         Assertions.assertEquals(gifDto.getUploadUser().getLastName(), result.getUploadUser().getLastName());
