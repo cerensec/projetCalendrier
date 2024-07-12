@@ -2,13 +2,92 @@
 <head>
     <meta charset="UTF-8">
     <title>Calendrier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #tableau-calendrier {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        #tableau-calendrier th, #tableau-calendrier td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #tableau-calendrier th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        #tableau-calendrier tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #tableau-calendrier tr:hover {
+            background-color: #ddd;
+        }
+
+        #tableau-calendrier td a {
+            display: block;
+            margin: 5px 0;
+        }
+
+        a.deconnexion {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #ff4c4c;
+        }
+
+        a.deconnexion:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 <h1>Calendrier</h1>
 <h2>Utilisateur</h2>
 <span>Nom d'utilisateur</span>
 <span>Nombre de points</span>
-<a href="/connexion">Déconnexion</a>
+<a href="/connexion" class="deconnexion">Déconnexion</a>
 
 <table id="tableau-calendrier">
     <tr>
@@ -21,7 +100,10 @@
         <td>Date</td>
         <td>Exemple de Gif</td>
         <td>Nom auteur</td>
-        <td>Réactions + nom</td>
+        <td>
+            Réactions + nom
+            <a href="/reagir-gif">Réagir</a>
+        </td>
     </tr>
     <tr>
         <td>Date</td>
@@ -42,7 +124,5 @@
         <td></td>
     </tr>
 </table>
-
-
-
 </body>
+</html>
