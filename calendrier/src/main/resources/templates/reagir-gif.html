@@ -4,5 +4,15 @@
     <title>Reagir gif</title>
 </head>
 <body>
-Reagir gif
+<h1>Réagir gif</h1>
+<img alt="Gif">
+<form action="#" th:action="@{/gif-reaction/addReactionToGif}" method="post">
+    <div class="form-group">
+        <label for="select">Réaction</label>
+        <select id="select">
+            <option>Choisissez une réaction</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Réagir</button>
+</form>
 </body>
