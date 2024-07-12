@@ -51,4 +51,16 @@ public class UserController {
         }
     }
 
+    @PostMapping("/login")
+    public ResponseEntity<UserDto> login(@RequestParam("email") final String email, @RequestParam("password") final String password) {
+        try {
+            final UserDto user = userService.login(email, password);
+            return ResponseEntity.ok(user);
+        } catch (EntityNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
 }

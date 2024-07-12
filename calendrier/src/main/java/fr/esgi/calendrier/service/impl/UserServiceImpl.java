@@ -48,4 +48,15 @@ public class UserServiceImpl implements UserService {
         final User user = userRepository.findByEmailIgnoreCase(email).orElseThrow(() -> new EntityNotFoundException("User not found with email: " + email));
         return userMapper.toDto(user);
     }
+
+    @Override
+    public UserDto login(String email, String password) {
+        final UserDto user = findUserByEmail(email);
+
+        if (!user.getPassword().equals(password)) {
+            throw new IllegalArgumentException("Invalid password");
+        }
+
+        return user;
+    }
 }

@@ -30,4 +30,13 @@ public interface UserService {
      * @return the user dto
      */
     UserDto findUserByEmail(String email);
+
+    /**
+     * Login user dto.
+     *
+     * @param email    the email
+     * @param password the password
+     * @return the user dto
+     */
+    UserDto login(String email, String password);
 }
