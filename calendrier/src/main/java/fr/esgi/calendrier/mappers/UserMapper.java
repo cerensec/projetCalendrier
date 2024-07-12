@@ -26,7 +26,7 @@ public class UserMapper {
                 .firstName(user.getFirstName())
                 .lastName(user.getLastName())
                 .theme(themeToDto(user.getTheme()))
-                .tokenBalance(user.getTokenBalance())
+                .tokenBalance(user.getTokenBalance() == null ? 500 : user.getTokenBalance())
                 .build();
     }
 
@@ -44,7 +44,7 @@ public class UserMapper {
                 .firstName(userDto.getFirstName())
                 .lastName(userDto.getLastName())
                 .theme(themeToEntity(userDto.getTheme()))
-                .tokenBalance(userDto.getTokenBalance())
+                .tokenBalance(userDto.getTokenBalance() == null ? 500 : userDto.getTokenBalance())
                 .build();
     }
 
