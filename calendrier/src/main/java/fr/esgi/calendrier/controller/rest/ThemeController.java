@@ -1,4 +1,4 @@
-package fr.esgi.calendrier.controller;
+package fr.esgi.calendrier.controller.rest;
 
 import fr.esgi.calendrier.dto.ThemeDto;
 import fr.esgi.calendrier.service.ThemeService;

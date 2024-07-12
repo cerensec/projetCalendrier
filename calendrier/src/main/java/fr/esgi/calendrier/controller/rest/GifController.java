@@ -1,4 +1,4 @@
-package fr.esgi.calendrier.controller;
+package fr.esgi.calendrier.controller.rest;
 
 import fr.esgi.calendrier.dto.GifDto;
 import fr.esgi.calendrier.request.AddGifToDayRequest;

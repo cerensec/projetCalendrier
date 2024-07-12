@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <title>Se connecter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container text-center">
+    <h1>Se connecter</h1>
+    <form th:action="@{/signin}" method="post" class="col-lg-6 offset-lg-3">
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="text" id="email" name="email" class="form-control" required/>
+            <br/>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" class="form-control" required/>
+            <br/>
+            <input type="submit" value="Se connecter" class="btn btn-primary"/>
+        </div>
+    </form>
+</div>
+</body>
+</html>

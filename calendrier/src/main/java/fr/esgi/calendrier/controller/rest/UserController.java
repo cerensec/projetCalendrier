@@ -1,6 +1,7 @@
-package fr.esgi.calendrier.controller;
+package fr.esgi.calendrier.controller.rest;
 
 import fr.esgi.calendrier.dto.UserDto;
+import fr.esgi.calendrier.request.SaveUserRequest;
 import fr.esgi.calendrier.service.UserService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +28,8 @@ public class UserController {
     }
 
     @PostMapping("/save")
-    public ResponseEntity<UserDto> saveUser(@RequestBody final UserDto userDto) {
-        return ResponseEntity.ok(userService.saveUser(userDto));
+    public ResponseEntity<UserDto> saveUser(@RequestBody final SaveUserRequest request) {
+        return ResponseEntity.ok(userService.saveUser(request));
     }
 
     @GetMapping("/{id}")

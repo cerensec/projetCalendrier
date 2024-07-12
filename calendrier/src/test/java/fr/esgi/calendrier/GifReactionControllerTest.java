@@ -1,6 +1,6 @@
 package fr.esgi.calendrier;
 
-import fr.esgi.calendrier.controller.GifReactionController;
+import fr.esgi.calendrier.controller.rest.GifReactionController;
 import fr.esgi.calendrier.dto.*;
 import fr.esgi.calendrier.request.AddReactionToGifRequest;
 import fr.esgi.calendrier.service.GifReactionService;

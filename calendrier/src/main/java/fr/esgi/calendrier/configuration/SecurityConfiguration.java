@@ -13,19 +13,18 @@ public class SecurityConfiguration {
 
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        // On peut se connecter sans utiliser https
         http.csrf(csrf -> csrf.disable())
 
-//                .formLogin(login -> login
-//                        // Pour utiliser sa vue de connexion "maison" :
-//                        .loginProcessingUrl("/login")
-//                        .defaultSuccessUrl("/calendar")
-//                        .failureUrl("/login-error")
-//                        .permitAll()
-//                )
+                .formLogin(login -> login
+                        .loginPage("/login")
+                        .defaultSuccessUrl("/calendar")
+                        .failureUrl("/login-error")
+                        .permitAll()
+                )
 
                 .authorizeHttpRequests(requests ->
-                        requests.requestMatchers("/swagger-ui/**").permitAll()
+                        requests.requestMatchers("/signup", "/login").permitAll()
+                                .requestMatchers("/swagger-ui/**").permitAll()
                                 .requestMatchers("/v3/api-docs/**").permitAll()
                                 .requestMatchers("/index").authenticated()
                                 .requestMatchers("/h2-console/**").permitAll()

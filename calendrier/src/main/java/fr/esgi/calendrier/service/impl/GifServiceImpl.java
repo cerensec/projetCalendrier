@@ -112,10 +112,12 @@ public class GifServiceImpl implements GifService {
         dayDto.setGif(gifDto);
 
         // Update user token balance
+
+
         userDto.setTokenBalance(userDto.getTokenBalance() - dayDto.getCost());
 
         // Save updated day and user and gif
-        return this.saveGif(gifDto) != null && dayService.saveDay(dayDto) != null && userService.saveUser(userDto) != null ;
+        return this.saveGif(gifDto) != null && dayService.saveDay(dayDto) != null && userService.updateUser(userDto) != null ;
     }
 
     @Override
@@ -135,7 +137,7 @@ public class GifServiceImpl implements GifService {
         dayDto.setGif(this.saveGifFile(file, userDto));
 
         // Save updated day and user
-        return dayService.saveDay(dayDto) != null && userService.saveUser(userDto) != null;
+        return dayService.saveDay(dayDto) != null && userService.updateUser(userDto) != null;
     }
 
 
