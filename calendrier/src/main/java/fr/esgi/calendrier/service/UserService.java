@@ -1,6 +1,7 @@
 package fr.esgi.calendrier.service;
 
 import fr.esgi.calendrier.dto.UserDto;
+import fr.esgi.calendrier.request.SaveUserRequest;
 
 /**
  * The interface User service.
@@ -10,10 +11,18 @@ public interface UserService {
     /**
      * Create user user dto.
      *
-     * @param user the user
+     * @param request the request
      * @return the user dto
      */
-    UserDto saveUser(UserDto user);
+    UserDto saveUser(SaveUserRequest request);
+
+    /**
+     * Update user user dto.
+     *
+     * @param userDto the user dto
+     * @return the user dto
+     */
+    UserDto updateUser(UserDto userDto);
 
     /**
      * Find user by id user dto.
